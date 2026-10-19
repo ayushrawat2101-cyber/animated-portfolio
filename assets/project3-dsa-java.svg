@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#090b12"/>
+    </linearGradient>
+    <linearGradient id="p3-java" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow-dsa" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" rx="28" fill="url(#p3-bg)"/>
+
+  <!-- Watermark -->
+  <text x="50" y="140" font-family="'Anton', sans-serif" font-size="140" font-weight="900" fill="rgba(255,255,255,0.04)" letter-spacing="4">JAVA DSA</text>
+
+  <!-- Code Editor & LeetCode Solution Window -->
+  <g transform="translate(60, 60)" filter="url(#shadow-dsa)">
+    <rect width="680" height="480" rx="20" fill="#11131a" stroke="#252a38" stroke-width="3"/>
+
+    <!-- Tab Bar -->
+    <rect width="680" height="40" rx="20" fill="#0b0d14"/>
+    <circle cx="28" cy="20" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="20" r="6" fill="#f59e0b"/>
+    <circle cx="68" cy="20" r="6" fill="#10b981"/>
+
+    <!-- Active Tab -->
+    <rect x="100" y="6" width="180" height="34" rx="8" fill="#181c28"/>
+    <text x="120" y="27" font-family="monospace" font-size="11" font-weight="700" fill="#f59e0b">☕ Solution.java</text>
+
+    <!-- LeetCode User Badge -->
+    <rect x="490" y="8" width="170" height="26" rx="13" fill="#1f2434"/>
+    <circle cx="505" cy="21" r="5" fill="#f59e0b"/>
+    <text x="518" y="25" font-family="monospace" font-size="10" font-weight="700" fill="#ffffff">leetcode/@rawat_ayush00</text>
+
+    <!-- Editor Left: Java Code -->
+    <g transform="translate(30, 65)">
+      <!-- Line Numbers -->
+      <g fill="#4b5563" font-family="monospace" font-size="11" text-anchor="end">
+        <text x="20" y="20">1</text>
+        <text x="20" y="42">2</text>
+        <text x="20" y="64">3</text>
+        <text x="20" y="86">4</text>
+        <text x="20" y="108">5</text>
+        <text x="20" y="130">6</text>
+        <text x="20" y="152">7</text>
+        <text x="20" y="174">8</text>
+        <text x="20" y="196">9</text>
+        <text x="20" y="218">10</text>
+        <text x="20" y="240">11</text>
+        <text x="20" y="262">12</text>
+        <text x="20" y="284">13</text>
+      </g>
+
+      <!-- Code Snippet -->
+      <g transform="translate(35, 0)" font-family="monospace" font-size="12">
+        <text x="0" y="20"><tspan fill="#f43f5e">public class</tspan> <tspan fill="#38bdf8">OptimalDSA</tspan> {</text>
+        <text x="20" y="42"><tspan fill="#a855f7">/** Ayush Rawat Java Algorithm **/</tspan></text>
+        <text x="20" y="64"><tspan fill="#f43f5e">public int</tspan> <tspan fill="#fbbf24">maxSubArray</tspan>(<tspan fill="#38bdf8">int[]</tspan> nums) {</text>
+        <text x="40" y="86"><tspan fill="#f43f5e">int</tspan> maxSum = nums[<tspan fill="#a3e635">0</tspan>];</text>
+        <text x="40" y="108"><tspan fill="#f43f5e">int</tspan> currSum = <tspan fill="#a3e635">0</tspan>;</text>
+        <text x="40" y="130"><tspan fill="#f43f5e">for</tspan> (<tspan fill="#f43f5e">int</tspan> val : nums) {</text>
+        <text x="60" y="152">currSum = Math.<tspan fill="#38bdf8">max</tspan>(val, currSum + val);</text>
+        <text x="60" y="174">maxSum = Math.<tspan fill="#38bdf8">max</tspan>(maxSum, currSum);</text>
+        <text x="40" y="196">}</text>
+        <text x="40" y="218"><tspan fill="#f43f5e">return</tspan> maxSum; <tspan fill="#10b981">// O(N) Time, O(1) Space</tspan></text>
+        <text x="20" y="240">}</text>
+        <text x="0" y="262">}</text>
+      </g>
+    </g>
+
+    <!-- Editor Right: LeetCode / GFG Stats Card -->
+    <g transform="translate(420, 65)">
+      <!-- LeetCode Submission Accepted Box -->
+      <rect width="230" height="210" rx="14" fill="#161a26" stroke="#2a3246" stroke-width="1.5"/>
+      <g transform="translate(18, 24)">
+        <text x="0" y="14" font-family="sans-serif" font-size="12" font-weight="700" fill="#10b981">✔ Accepted</text>
+        <text x="0" y="32" font-family="sans-serif" font-size="9" fill="#9ca3af">Kadane's Algorithm • Java</text>
+
+        <rect x="0" y="44" width="194" height="42" rx="8" fill="#1f2538"/>
+        <text x="12" y="64" font-family="sans-serif" font-size="10" fill="#9ca3af">Runtime</text>
+        <text x="12" y="79" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">0 ms <tspan fill="#10b981">(Beats 100%)</tspan></text>
+
+        <rect x="0" y="96" width="194" height="42" rx="8" fill="#1f2538"/>
+        <text x="12" y="116" font-family="sans-serif" font-size="10" fill="#9ca3af">Memory</text>
+        <text x="12" y="131" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">44.8 MB <tspan fill="#10b981">(Beats 98.2%)</tspan></text>
+
+        <!-- Platform Badges -->
+        <g transform="translate(0, 150)">
+          <rect width="60" height="22" rx="6" fill="#f59e0b" opacity="0.2"/>
+          <text x="10" y="15" font-family="sans-serif" font-size="9" font-weight="700" fill="#f59e0b">LeetCode</text>
+
+          <rect x="66" width="56" height="22" rx="6" fill="#10b981" opacity="0.2"/>
+          <text x="76" y="15" font-family="sans-serif" font-size="9" font-weight="700" fill="#10b981">GFG</text>
+
+          <rect x="128" width="66" height="22" rx="6" fill="#8b5cf6" opacity="0.2"/>
+          <text x="136" y="15" font-family="sans-serif" font-size="9" font-weight="700" fill="#c084fc">CodeChef</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Bottom Terminal Output Strip -->
+    <g transform="translate(20, 370)">
+      <rect width="640" height="85" rx="10" fill="#0c0e14" stroke="#1f2432"/>
+      <text x="20" y="26" font-family="monospace" font-size="11" fill="#10b981">➜ javac Solution.java &amp;&amp; java Solution</text>
+      <text x="20" y="48" font-family="monospace" font-size="11" fill="#e5e7eb">[SUCCESS] Test cases passed: 210/210 • Problem Solving Proficiency: Advanced</text>
+      <text x="20" y="70" font-family="monospace" font-size="11" fill="#f59e0b">Profile: @rawat_ayush00 | Core Focus: Java DSA &amp; Algorithmic Optimization</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f8ea"/>
+      <stop offset="100%" stop-color="#e2edd2"/>
+    </linearGradient>
+    <linearGradient id="p3-lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#84cc16"/>
+      <stop offset="100%" stop-color="#a3e635"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="28" stdDeviation="32" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="800" height="600" rx="28" fill="url(#p3-bg)"/>
+
+  <!-- Neon Aura blobs -->
+  <circle cx="650" cy="180" r="140" fill="#c084fc" opacity="0.35" filter="blur(40px)"/>
+  <circle cx="150" cy="400" r="160" fill="#a3e635" opacity="0.45" filter="blur(50px)"/>
+
+  <!-- Laptop Mockup in Isometric / Perspective Float -->
+  <g transform="translate(80, 70)" filter="url(#shadow3)">
+    <!-- Laptop Screen Outer Lid -->
+    <rect x="50" y="30" width="540" height="340" rx="16" fill="#18181b" stroke="#3f3f46" stroke-width="3"/>
+    <circle cx="320" cy="44" r="3.5" fill="#71717a"/>
+
+    <!-- Screen Glass -->
+    <g transform="translate(62, 54)">
+      <rect width="516" height="304" rx="8" fill="#ffffff"/>
+
+      <!-- Agency Website Top Bar -->
+      <rect width="516" height="36" fill="#f8fafc" stroke="#f1f5f9"/>
+      <text x="24" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" fill="#18181b" letter-spacing="1">HEBREW AGENCY</text>
+      <g fill="#64748b" font-family="sans-serif" font-size="10" font-weight="600">
+        <text x="230" y="23">Solutions</text>
+        <text x="295" y="23">Case Studies</text>
+        <text x="375" y="23">Pricing</text>
+      </g>
+      <rect x="428" y="8" width="72" height="20" rx="10" fill="#18181b"/>
+      <text x="444" y="22" font-family="sans-serif" font-size="9" font-weight="700" fill="#a3e635">Get Quote</text>
+
+      <!-- Website Hero Content -->
+      <g transform="translate(24, 52)">
+        <rect x="0" y="0" width="130" height="18" rx="9" fill="#f0fdf4"/>
+        <text x="10" y="13" font-family="sans-serif" font-size="9" font-weight="700" fill="#16a34a">● TOP RATED AGENCY</text>
+
+        <text x="0" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="900" fill="#0f172a">SCALE YOUR BRAND</text>
+        <text x="0" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="900" fill="#16a34a">WITH PERFORMANCE</text>
+        <text x="0" y="92" font-family="sans-serif" font-size="10" fill="#64748b">Data-driven performance marketing designed to double ROAS.</text>
+
+        <!-- CTA Buttons -->
+        <rect x="0" y="112" width="115" height="28" rx="14" fill="#18181b"/>
+        <text x="18" y="130" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Start Scaling ↗</text>
+
+        <!-- Analytics Visual Chart -->
+        <rect x="250" y="10" width="220" height="175" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="265" y="32" font-family="sans-serif" font-size="10" font-weight="700" fill="#0f172a">Monthly Revenue Growth</text>
+        <text x="265" y="52" font-family="sans-serif" font-size="16" font-weight="900" fill="#16a34a">+284%</text>
+
+        <!-- Trend graph -->
+        <path d="M265 140 Q 310 120, 340 135 T 410 75 T 455 60" fill="none" stroke="#84cc16" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M265 140 Q 310 120, 340 135 T 410 75 T 455 60 L 455 160 L 265 160 Z" fill="#84cc16" opacity="0.12"/>
+      </g>
+    </g>
+
+    <!-- Laptop Base Keyboard Deck -->
+    <path d="M10 370 L630 370 L600 395 L40 395 Z" fill="#27272a"/>
+    <path d="M260 370 L380 370 L370 380 L270 380 Z" fill="#3f3f46"/>
+  </g>
+</svg>

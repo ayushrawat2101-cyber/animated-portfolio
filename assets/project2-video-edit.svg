@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="v2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#0a0a0d"/>
+    </linearGradient>
+    <linearGradient id="v2-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="shadow-video" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="800" height="600" rx="28" fill="url(#v2-bg)"/>
+
+  <!-- Watermark -->
+  <text x="50" y="140" font-family="'Anton', sans-serif" font-size="140" font-weight="900" fill="rgba(255,255,255,0.05)" letter-spacing="4">CINEMA</text>
+
+  <!-- Video Editor Studio Window / Premiere & DaVinci inspired -->
+  <g transform="translate(60, 60)" filter="url(#shadow-video)">
+    <!-- Main Outer Window Frame -->
+    <rect width="680" height="480" rx="20" fill="#16171b" stroke="#2d3038" stroke-width="3"/>
+
+    <!-- Window Title Bar -->
+    <rect width="680" height="38" rx="20" fill="#101114"/>
+    <circle cx="28" cy="19" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="19" r="6" fill="#f59e0b"/>
+    <circle cx="68" cy="19" r="6" fill="#10b981"/>
+    <text x="340" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#f97316" text-anchor="middle">@cinematic_lens89 — 4K SHOWREEL TIMELINE</text>
+
+    <!-- Top Preview Monitor Area -->
+    <g transform="translate(20, 52)">
+      <!-- Monitor Frame -->
+      <rect width="440" height="260" rx="10" fill="#000000" stroke="#282a32" stroke-width="2"/>
+      
+      <!-- Video Screen Graphic: Warm Cinematic Portrait -->
+      <radialGradient id="screen-glow" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="#fb923c" stop-opacity="0.8"/>
+        <stop offset="60%" stop-color="#7c2d12" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#0f0f14"/>
+      </radialGradient>
+      <rect x="4" y="4" width="432" height="252" rx="8" fill="url(#screen-glow)"/>
+
+      <!-- Subject Silhouette with sunglasses -->
+      <circle cx="220" cy="110" r="50" fill="#18181b"/>
+      <ellipse cx="220" cy="220" rx="90" ry="70" fill="#18181b"/>
+      <!-- Sunglasses on subject -->
+      <rect x="195" y="105" width="22" height="12" rx="3" fill="#09090b" stroke="#f59e0b" stroke-width="1.5"/>
+      <rect x="223" y="105" width="22" height="12" rx="3" fill="#09090b" stroke="#f59e0b" stroke-width="1.5"/>
+      <line x1="217" y1="110" x2="223" y2="110" stroke="#f59e0b" stroke-width="1.5"/>
+
+      <!-- Overlay HUD Info -->
+      <text x="20" y="30" font-family="monospace" font-size="11" fill="#f97316" font-weight="700">● REC 00:01:24:18</text>
+      <text x="330" y="30" font-family="monospace" font-size="11" fill="#fbbf24">@cinematic_lens89</text>
+      <text x="20" y="240" font-family="sans-serif" font-size="10" fill="#e4e4e7">COLOR GRADE: TEAL &amp; WARM AMBER</text>
+
+      <!-- Center Play Icon -->
+      <circle cx="220" cy="130" r="28" fill="rgba(0,0,0,0.6)" stroke="#f97316" stroke-width="2"/>
+      <polygon points="214,118 232,130 214,142" fill="#ffffff"/>
+    </g>
+
+    <!-- Right Side Scopes / Lumetri Color Panel -->
+    <g transform="translate(476, 52)">
+      <rect width="184" height="260" rx="10" fill="#121316" stroke="#282a32" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="11" font-weight="700" fill="#f4f4f5">LUMETRI SCOPES</text>
+
+      <!-- Color Wheels Visual -->
+      <g transform="translate(20, 45)">
+        <circle cx="35" cy="40" r="28" fill="#181a20" stroke="#383c48" stroke-width="2"/>
+        <circle cx="42" cy="34" r="4" fill="#f97316"/>
+        <text x="35" y="82" font-family="sans-serif" font-size="9" fill="#a1a1aa" text-anchor="middle">Shadows</text>
+
+        <circle cx="110" cy="40" r="28" fill="#181a20" stroke="#383c48" stroke-width="2"/>
+        <circle cx="106" cy="45" r="4" fill="#38bdf8"/>
+        <text x="110" y="82" font-family="sans-serif" font-size="9" fill="#a1a1aa" text-anchor="middle">Highlights</text>
+      </g>
+
+      <!-- Audio Meters Visual -->
+      <g transform="translate(20, 150)">
+        <text x="0" y="12" font-family="sans-serif" font-size="10" font-weight="600" fill="#71717a">AUDIO PEAK (dB)</text>
+        <!-- Meter L -->
+        <rect x="0" y="24" width="68" height="12" rx="3" fill="#222"/>
+        <rect x="0" y="24" width="56" height="12" rx="3" fill="#10b981"/>
+        <!-- Meter R -->
+        <rect x="76" y="24" width="68" height="12" rx="3" fill="#222"/>
+        <rect x="76" y="24" width="52" height="12" rx="3" fill="#10b981"/>
+        <rect x="52" y="24" width="4" height="12" fill="#f59e0b"/>
+      </g>
+
+      <rect x="18" y="210" width="148" height="32" rx="8" fill="url(#v2-glow)"/>
+      <text x="92" y="230" font-family="sans-serif" font-size="11" font-weight="700" fill="#18181b" text-anchor="middle">EXPORT 4K ↗</text>
+    </g>
+
+    <!-- Bottom Editing Timeline -->
+    <g transform="translate(20, 326)">
+      <rect width="640" height="134" rx="10" fill="#0d0e11" stroke="#282a32" stroke-width="1.5"/>
+
+      <!-- Timeline Ruler -->
+      <line x1="0" y1="24" x2="640" y2="24" stroke="#22252e" stroke-width="1"/>
+      <text x="20" y="16" font-family="monospace" font-size="10" fill="#71717a">00:00</text>
+      <text x="160" y="16" font-family="monospace" font-size="10" fill="#71717a">00:15</text>
+      <text x="300" y="16" font-family="monospace" font-size="10" fill="#71717a">00:30</text>
+      <text x="440" y="16" font-family="monospace" font-size="10" fill="#71717a">00:45</text>
+      <text x="580" y="16" font-family="monospace" font-size="10" fill="#71717a">01:00</text>
+
+      <!-- Video Track 2 (Overlay & Titles) -->
+      <rect x="80" y="32" width="130" height="22" rx="4" fill="#a855f7" opacity="0.85"/>
+      <text x="90" y="47" font-family="sans-serif" font-size="9" font-weight="700" fill="#ffffff">Motion Title</text>
+
+      <rect x="230" y="32" width="180" height="22" rx="4" fill="#06b6d4" opacity="0.85"/>
+      <text x="240" y="47" font-family="sans-serif" font-size="9" font-weight="700" fill="#ffffff">B-Roll Cut 02</text>
+
+      <!-- Video Track 1 (A-Roll Main) -->
+      <rect x="30" y="58" width="190" height="28" rx="4" fill="#3b82f6"/>
+      <text x="40" y="76" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Intro_A_Roll.mov</text>
+
+      <rect x="225" y="58" width="160" height="28" rx="4" fill="#f97316"/>
+      <text x="235" y="76" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Main_Dialogue.mp4</text>
+
+      <rect x="390" y="58" width="220" height="28" rx="4" fill="#3b82f6"/>
+      <text x="400" y="76" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Outro_Climax.mov</text>
+
+      <!-- Audio Track 1 (SFX & Music) -->
+      <rect x="30" y="92" width="580" height="24" rx="4" fill="#10b981" opacity="0.75"/>
+      <text x="40" y="108" font-family="sans-serif" font-size="9" font-weight="700" fill="#ffffff">Cinematic_Soundtrack_WAV + Whoosh SFX</text>
+
+      <!-- Red Playhead Line -->
+      <line x1="280" y1="8" x2="280" y2="126" stroke="#ef4444" stroke-width="2.5"/>
+      <polygon points="274,8 286,8 280,18" fill="#ef4444"/>
+    </g>
+  </g>
+
+  <!-- Floating Badge ↗ -->
+  <g transform="translate(630, 420)">
+    <circle cx="45" cy="45" r="45" fill="#f97316" filter="url(#shadow-video)"/>
+    <path d="M35 55 L55 35 M40 35 L55 35 L55 50" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

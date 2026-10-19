@@ -1,0 +1,12 @@
+{
+  "name": "animated-portfolio-scroll",
+  "version": "1.0.0",
+  "description": "Smooth scroll-based video frame sequence animation",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["canvas", "scroll-animation", "scrollytelling", "frames"],
+  "author": "",
+  "license": "ISC"
+}

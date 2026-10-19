@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Rawat — Frontend Developer, Java DSA &amp; Video Editor</title>
+
+  <!-- Google Fonts: Anton for Bold Display, Plus Jakarta Sans for UI/Body, Playfair Display for Serifs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lenis for smooth scrolling -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-badge">AYUSH RAWAT</div>
+      <div class="loader-title">INITIALIZING PORTFOLIO</div>
+      <div class="loader-bar-wrap">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <div class="loader-meta">
+        <span id="loader-percent" class="loader-percent">0%</span>
+        <span id="loader-count" class="loader-count">0 / 192</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Canvas Viewport (Fixed behind all content) -->
+  <div class="canvas-viewport">
+    <canvas id="animation-canvas"></canvas>
+    <!-- Cinematic Dark Gradient Vignette for perfect text contrast -->
+    <div class="canvas-ambient-overlay"></div>
+  </div>
+
+  <!-- Minimal Frame Counter Overlay (Bottom Right) -->
+  <div id="frame-counter" class="frame-counter">
+    FRAME <span id="current-frame-num">001</span> / 192
+  </div>
+
+  <!-- Sticky / Fixed Header Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo">
+        AYUSH RAWAT<span class="logo-dot"></span>
+      </a>
+
+      <!-- Floating Capsule Nav -->
+      <nav class="nav-pill">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills &amp; DSA</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action CTA -->
+      <a href="#contact" class="btn-header-cta">
+        <span>Hire Me</span>
+        <span class="arrow-badge">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Scrollable Page Content -->
+  <main class="page-content">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-top-badge">HI, I AM</div>
+
+      <!-- Giant Display Typography (Ayush Rawat framed around video subject) -->
+      <div class="hero-title-container">
+        <h1 class="hero-title">
+          <span class="name-part name-first">Ayush</span>
+          <span class="name-spacer"></span>
+          <span class="name-part name-last">Rawat</span>
+        </h1>
+      </div>
+
+      <!-- Quick Highlights Ticker Badge Strip -->
+      <div class="hero-badge-strip">
+        <span class="hero-mini-pill"><span class="pill-dot blue"></span> IBM PBEL Intern</span>
+        <span class="hero-mini-pill"><span class="pill-dot amber"></span> Java DSA Specialist</span>
+        <span class="hero-mini-pill"><span class="pill-dot green"></span> Gemini Student Ambassador</span>
+        <span class="hero-mini-pill"><span class="pill-dot purple"></span> Ex-GFG Campus Mantri</span>
+        <span class="hero-mini-pill"><span class="pill-dot orange"></span> Video Editor @cinematic_lens89</span>
+      </div>
+
+      <!-- Bottom Hero Cards Grid -->
+      <div class="hero-bottom-grid">
+        <!-- Left Hero Card -->
+        <div class="hero-left-card">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span> Frontend Developer • Java DSA • Video Editor
+          </div>
+          <h2 class="hero-headline">Building Interactive Websites, Algorithmic Code &amp; Cinematic Edits</h2>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Connect</span>
+              <span class="btn-icon">↗</span>
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <span>Explore Work</span>
+              <span class="btn-icon-down">↘</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Profile & Credentials Card -->
+        <div class="hero-social-card">
+          <div class="hero-social-header">
+            <div class="avatar-stack">
+              <div class="avatar av-1"></div>
+              <div class="avatar av-2"></div>
+              <div class="avatar av-3"></div>
+              <div class="avatar av-4"></div>
+              <div class="avatar av-more">+20</div>
+            </div>
+            <span class="hero-verified-badge">✔ Verified Fresher</span>
+          </div>
+          <div class="social-text">
+            <div class="stars">★★★★★</div>
+            <p><strong>IBM PBEL Intern</strong> • Ex-GFG Campus Mantri • Gemini Ambassador</p>
+          </div>
+
+          <!-- Quick Username Badges Strip -->
+          <div class="hero-handles-strip">
+            <a href="https://github.com/ayushrawat2101-cyber" target="_blank" rel="noopener" class="mini-handle-tag">
+              <span>💻</span> @ayushrawat2101-cyber
+            </a>
+            <a href="https://leetcode.com/u/rawat_ayush00/" target="_blank" rel="noopener" class="mini-handle-tag">
+              <span>⚡</span> leetcode/@rawat_ayush00
+            </a>
+            <a href="https://www.instagram.com/cinematic_lens89?cplk=bzVwcW9weXdkdmZi" target="_blank" rel="noopener" class="mini-handle-tag">
+              <span>🎬</span> @cinematic_lens89
+            </a>
+          </div>
+
+          <div class="social-btns">
+            <a href="#contact" class="btn-mini btn-mini-orange">Get In Touch</a>
+            <a href="https://wa.me/917233040176?text=Hi%20Ayush,%20saw%20your%20portfolio!" target="_blank" rel="noopener" class="btn-mini btn-mini-glass">WhatsApp Me ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to Animate Prompt -->
+      <div id="scroll-prompt" class="scroll-prompt">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span class="prompt-text">SCROLL TO EXPLORE</span>
+      </div>
+    </section>
+
+    <!-- METRIC MARQUEE TICKER BAR -->
+    <section class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>FRONTEND DEVELOPER</span>
+          <span class="star-accent">✦</span>
+          <span>IBM PBEL INTERN</span>
+          <span class="star-accent">✦</span>
+          <span>JAVA DSA SPECIALIST</span>
+          <span class="star-accent">✦</span>
+          <span>GEMINI STUDENT AMBASSADOR</span>
+          <span class="star-accent">✦</span>
+          <span>EX-GFG CAMPUS MANTRI</span>
+          <span class="star-accent">✦</span>
+          <span>VIDEO EDITOR @CINEMATIC_LENS89</span>
+          <span class="star-accent">✦</span>
+          <span>IIT DELHI AMBASSADOR</span>
+          <span class="star-accent">✦</span>
+          <span>LEETCODE @RAWAT_AYUSH00</span>
+          <span class="star-accent">✦</span>
+          <span>3 SKILL PLATFORM INTERN</span>
+          <span class="star-accent">✦</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>FRONTEND DEVELOPER</span>
+          <span class="star-accent">✦</span>
+          <span>IBM PBEL INTERN</span>
+          <span class="star-accent">✦</span>
+          <span>JAVA DSA SPECIALIST</span>
+          <span class="star-accent">✦</span>
+          <span>GEMINI STUDENT AMBASSADOR</span>
+          <span class="star-accent">✦</span>
+          <span>EX-GFG CAMPUS MANTRI</span>
+          <span class="star-accent">✦</span>
+          <span>VIDEO EDITOR @CINEMATIC_LENS89</span>
+          <span class="star-accent">✦</span>
+          <span>IIT DELHI AMBASSADOR</span>
+          <span class="star-accent">✦</span>
+          <span>LEETCODE @RAWAT_AYUSH00</span>
+          <span class="star-accent">✦</span>
+          <span>3 SKILL PLATFORM INTERN</span>
+          <span class="star-accent">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Col -->
+          <div class="about-label-col">
+            <div class="section-tag">
+              <span class="accent-dot">•</span> About Me
+            </div>
+            <div class="accent-line"></div>
+          </div>
+
+          <!-- Right Col -->
+          <div class="about-content-col">
+            <p class="about-statement">
+              Hey there, I'm <strong>Ayush Rawat</strong> — an energetic frontend developer, Java DSA problem solver, and cinematic video editor. As a dedicated fresher currently interning at <strong>IBM PBEL</strong> and previously at <strong>3 Skill Platform</strong>, I bridge algorithmic logic with creative visual storytelling.
+            </p>
+            <p class="about-secondary-text">
+              From solving complex algorithmic challenges in <strong>Java on LeetCode</strong> to crafting responsive React web apps and cutting 4K cinematic edits on my page <strong>@cinematic_lens89</strong>, I bring relentless curiosity, fresh ideas, and full dedication. Having served as an <strong>Ex-GFG Campus Mantri</strong> and <strong>Google Gemini Student Ambassador</strong>, I love building technology that inspires.
+            </p>
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Connect With Me</span>
+                <span class="btn-icon">↗</span>
+              </a>
+              <a href="#experience" class="btn btn-ghost">
+                <span>View My Journey</span>
+                <span class="btn-icon-down">↘</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK & TOOLS BAR -->
+    <section class="section logos-section">
+      <div class="container">
+        <div class="logos-grid">
+          <div class="brand-item">
+            <span class="brand-icon">☕</span>
+            <span class="brand-logo-text">JAVA (DSA)</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">⚛</span>
+            <span class="brand-logo-text">REACT</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">⚡</span>
+            <span class="brand-logo-text">JAVASCRIPT</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">🐍</span>
+            <span class="brand-logo-text">PYTHON &amp; C</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon cyan">🎬</span>
+            <span class="brand-logo-text rogue">PREMIERE PRO</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">✨</span>
+            <span class="brand-logo-text perfect">GEMINI 2.0 AI</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">🎨</span>
+            <span class="brand-logo-text">TAILWIND CSS</span>
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">🎥</span>
+            <span class="brand-logo-text trava">DAVINCI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & LEADERSHIP SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="section-tag">
+            <span class="accent-dot">•</span> Internships &amp; Leadership
+          </div>
+          <h2 class="section-title">My Journey &amp; Experience</h2>
+          <p class="section-subtitle">Real-world internships, student leadership, and community impact.</p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Card 1: IBM PBEL Intern -->
+          <div class="experience-card featured">
+            <div class="exp-badge-row">
+              <span class="exp-badge active"><span class="green-dot"></span> Current Internship</span>
+              <span class="exp-period">2026 — Present</span>
+            </div>
+            <h3 class="exp-role">Tech &amp; Software Intern</h3>
+            <h4 class="exp-company">IBM PBEL Program</h4>
+            <p class="exp-desc">
+              Engaged in enterprise technology learning, software architecture, technical problem solving, and modern development workflows with IBM mentorship.
+            </p>
+            <div class="exp-tags">
+              <span class="tag-pill">Enterprise Tech</span>
+              <span class="tag-pill">Software Engineering</span>
+              <span class="tag-pill">Problem Solving</span>
+            </div>
+          </div>
+
+          <!-- Card 2: 3 Skill Platform -->
+          <div class="experience-card">
+            <div class="exp-badge-row">
+              <span class="exp-badge">Previous Internship</span>
+              <span class="exp-period">Completed</span>
+            </div>
+            <h3 class="exp-role">Web Development Intern</h3>
+            <h4 class="exp-company">3 Skill Platform</h4>
+            <p class="exp-desc">
+              Designed and engineered multiple responsive websites and modern interfaces. Ensured cross-device compatibility, optimal load speeds, and clean component structures.
+            </p>
+            <div class="exp-tags">
+              <span class="tag-pill">Responsive Design</span>
+              <span class="tag-pill">HTML5 / CSS3</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Card 3: GeeksforGeeks Campus Mantri -->
+          <div class="experience-card">
+            <div class="exp-badge-row">
+              <span class="exp-badge gfg-badge">Leadership Role</span>
+              <span class="exp-period">Student Chapter</span>
+            </div>
+            <h3 class="exp-role">Ex-Campus Mantri</h3>
+            <h4 class="exp-company">GeeksforGeeks (GFG) • <a href="https://www.instagram.com/geeksforgeeks_mviet?dlrf=MXhweHpjNGU3Y3Z6NA==" target="_blank" rel="noopener" class="inline-link">@geeksforgeeks_mviet</a></h4>
+            <p class="exp-desc">
+              Headed campus tech initiatives, organized DSA bootcamps, coding hackathons, and technical workshops to foster a vibrant programming culture.
+            </p>
+            <div class="exp-tags">
+              <span class="tag-pill">Community Leadership</span>
+              <span class="tag-pill">GFG Mantri</span>
+              <span class="tag-pill">DSA Workshops</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Gemini Ambassador & IIT Delhi -->
+          <div class="experience-card">
+            <div class="exp-badge-row">
+              <span class="exp-badge ai-badge">Ambassador &amp; Honors</span>
+              <span class="exp-period">Recognized</span>
+            </div>
+            <h3 class="exp-role">Google Gemini Student Ambassador &amp; IIT Delhi CA</h3>
+            <h4 class="exp-company">Google AI &amp; IIT Delhi Events</h4>
+            <p class="exp-desc">
+              Selected as Google Gemini Student Ambassador educating peers on Generative AI. Served as Campus Ambassador for prestigious IIT Delhi fests with multiple merit certificates.
+            </p>
+            <div class="exp-tags">
+              <span class="tag-pill">Gemini AI</span>
+              <span class="tag-pill">IIT Delhi CA</span>
+              <span class="tag-pill">Multiple Certificates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK (PROJECTS GRID) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="projects-header">
+          <div class="section-tag">
+            <span class="accent-dot">•</span> Featured Projects / 01 to 04
+          </div>
+          <h2 class="section-title">Web Code, DSA Solutions &amp; 4K Edits</h2>
+          <p class="section-subtitle">Bridging Frontend Web Development, Java Algorithmic Problem Solving, and Cinematic Video Production.</p>
+        </div>
+
+        <!-- 2-Column Asymmetric Grid -->
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: 3 Skill Platform Responsive Web App -->
+          <div class="project-card project-card-1">
+            <div class="project-visual-wrapper">
+              <img src="assets/project1-responsive-web.svg" alt="3 Skill Platform Responsive Web App" class="project-img" loading="lazy">
+              <div class="project-hover-overlay">
+                <span class="view-pill">View Web Project ↗</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">3 Skill Platform — Responsive Web Applications</h3>
+              <p class="project-desc">Designed multiple fluid, mobile-first responsive interfaces during internship with 100/100 Lighthouse performance</p>
+              <div class="project-tags">
+                <span class="tag-pill">Frontend Dev</span>
+                <span class="tag-pill">Responsive Design</span>
+                <span class="tag-pill">3 Skill Platform</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Video Editing Showreel (@cinematic_lens89) -->
+          <div class="project-card project-card-2 staggered">
+            <div class="project-visual-wrapper">
+              <img src="assets/project2-video-edit.svg" alt="Cinematic Video Edit & Showreel" class="project-img" loading="lazy">
+              <div class="project-hover-overlay">
+                <a href="https://www.instagram.com/cinematic_lens89?cplk=bzVwcW9weXdkdmZi" target="_blank" rel="noopener" class="view-pill">Watch on @cinematic_lens89 ↗</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">4K Cinematic Video Showreel &amp; Timeline Edit</h3>
+              <p class="project-desc">Mastered in Premiere Pro &amp; DaVinci Resolve with custom sound design, beat-matched cuts, and warm teal &amp; amber color grade</p>
+              <div class="project-tags">
+                <span class="tag-pill">Premiere Pro</span>
+                <span class="tag-pill">DaVinci Resolve</span>
+                <span class="tag-pill">@cinematic_lens89</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Java DSA Problem Solving (LeetCode / GFG) -->
+          <div class="project-card project-card-3">
+            <div class="project-visual-wrapper">
+              <img src="assets/project3-dsa-java.svg" alt="Optimal Java DSA Solutions" class="project-img" loading="lazy">
+              <div class="project-hover-overlay">
+                <a href="https://leetcode.com/u/rawat_ayush00/" target="_blank" rel="noopener" class="view-pill">View LeetCode Profile ↗</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Optimal Java DSA &amp; Algorithmic Problem Solving</h3>
+              <p class="project-desc">High-performance algorithms in Java on LeetCode (@rawat_ayush00), GeeksforGeeks, and CodeChef focusing on optimal time &amp; space complexity</p>
+              <div class="project-tags">
+                <span class="tag-pill">Java DSA</span>
+                <span class="tag-pill">LeetCode</span>
+                <span class="tag-pill">GeeksforGeeks</span>
+                <span class="tag-pill">CodeChef</span>
+              </div>
+            </div>
+
+            <!-- Detail Quote Under Card 3 -->
+            <div class="quote-callout">
+              <p class="quote-text">"From Java algorithms to pixel-perfect React components and 4K cinematic video timelines — I build with precision."</p>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Short-Form Viral Video Edit -->
+          <div class="project-card project-card-4 staggered">
+            <div class="project-visual-wrapper">
+              <img src="assets/project4-shortform.svg" alt="Dynamic Short-Form Viral Reel" class="project-img" loading="lazy">
+              <div class="project-hover-overlay">
+                <span class="view-pill">Watch Reel ↗</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Dynamic Short-Form Reel &amp; Social Video Edit</h3>
+              <p class="project-desc">High-retention vertical edits with kinetic subtitles, audio waveforms, sound effects, and motion graphics for Instagram Reels &amp; Shorts</p>
+              <div class="project-tags">
+                <span class="tag-pill">Viral Shorts</span>
+                <span class="tag-pill">Kinetic Typography</span>
+                <span class="tag-pill">1.2M+ Reach</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS, DSA & AI MATRIX SECTION -->
+    <section id="skills" class="section services-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="section-tag">
+            <span class="accent-dot">•</span> Technical Skills &amp; Stack
+          </div>
+          <h2 class="section-title">Core Skills, DSA &amp; AI Stack</h2>
+          <p class="section-subtitle">A balanced fusion of software engineering, algorithmic logic, and creative motion.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 01: Programming & Java DSA -->
+          <div class="service-card highlight">
+            <div class="service-num">01</div>
+            <h3 class="service-title">Programming &amp; Java DSA</h3>
+            <p class="service-desc">Strong problem-solving foundation with primary focus on Java Data Structures &amp; Algorithms, along with C and Python.</p>
+            <ul class="service-list">
+              <li><strong>Java</strong> (Primary Language for DSA &amp; OOP)</li>
+              <li><strong>C</strong> (Procedural Logic &amp; Memory Management)</li>
+              <li><strong>Python</strong> (Scripting &amp; Problem Solving)</li>
+              <li>Platforms: <strong>LeetCode</strong> (@rawat_ayush00), <strong>GFG</strong>, <strong>CodeChef</strong></li>
+              <li>Arrays, LinkedList, Trees, Graphs, DP &amp; Recursion</li>
+            </ul>
+          </div>
+
+          <!-- 02: Frontend Web Development -->
+          <div class="service-card">
+            <div class="service-num">02</div>
+            <h3 class="service-title">Frontend Web Development</h3>
+            <p class="service-desc">Crafting responsive, accessible, and dynamic user interfaces with clean semantic code and interactive animations.</p>
+            <ul class="service-list">
+              <li>HTML5, Modern CSS3 &amp; Tailwind CSS</li>
+              <li>JavaScript (ES6+, DOM, Asynchronous Fetch)</li>
+              <li>React.js (Component Design, Props, Hooks &amp; State)</li>
+              <li>Canvas 2D Scroll-Driven Video Animations</li>
+              <li>Git &amp; GitHub Version Control</li>
+            </ul>
+          </div>
+
+          <!-- 03: Video Editing & Motion Graphics -->
+          <div class="service-card">
+            <div class="service-num">03</div>
+            <h3 class="service-title">Video Editing &amp; Motion Design</h3>
+            <p class="service-desc">Creating retention-focused cinematic cuts and short-form viral reels on my page <strong>@cinematic_lens89</strong>.</p>
+            <ul class="service-list">
+              <li>Adobe Premiere Pro &amp; DaVinci Resolve</li>
+              <li>Cinematic Color Correction, LUTs &amp; Grading</li>
+              <li>Sound Design, Audio Syncing &amp; Beat Matching</li>
+              <li>Adobe After Effects &amp; Kinetic Motion Subtitles</li>
+              <li>YouTube Long-Form &amp; Instagram Viral Reels</li>
+            </ul>
+          </div>
+
+          <!-- 04: AI Models & Generative Tools -->
+          <div class="service-card highlight-ai">
+            <div class="service-num">04</div>
+            <h3 class="service-title">AI Models &amp; Generative Tech</h3>
+            <p class="service-desc">As a <strong>Google Gemini Student Ambassador</strong>, I leverage cutting-edge AI models to accelerate workflows and build smart solutions.</p>
+            <ul class="service-list">
+              <li><strong>Google Gemini 1.5 / 2.0 Flash &amp; Pro</strong> (Student Ambassador)</li>
+              <li>Claude 3.5 Sonnet &amp; OpenAI GPT-4o</li>
+              <li>AI Prompt Engineering &amp; Agentic Workflows</li>
+              <li>Generative AI Video, Audio &amp; Visual Tools</li>
+              <li>AI-Powered Code Optimization &amp; Research</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATES SHOWCASE SECTION -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-centered">
+          <div class="section-tag">
+            <span class="accent-dot">•</span> Verified Accreditations &amp; Honors
+          </div>
+          <h2 class="section-title">Certificates, Leadership &amp; Honors</h2>
+          <p class="section-subtitle">Official credentials from premier national institutes, tech titans, industry internships, and competitive coding arenas.</p>
+
+          <!-- Floating Credentials Trust Bar / Stats Ribbon -->
+          <div class="cert-stats-ribbon">
+            <div class="cert-stat-badge">
+              <span class="stat-icon">🎓</span>
+              <div class="stat-detail">
+                <span class="stat-number">6+</span>
+                <span class="stat-title">Verified Credentials</span>
+              </div>
+            </div>
+            <div class="cert-stat-badge">
+              <span class="stat-icon">🏛️</span>
+              <div class="stat-detail">
+                <span class="stat-number">IIT Delhi</span>
+                <span class="stat-title">Double Conclave Honor</span>
+              </div>
+            </div>
+            <div class="cert-stat-badge">
+              <span class="stat-icon">⚡</span>
+              <div class="stat-detail">
+                <span class="stat-number">Google Gemini</span>
+                <span class="stat-title">Student Ambassador</span>
+              </div>
+            </div>
+            <div class="cert-stat-badge">
+              <span class="stat-icon">🏛️</span>
+              <div class="stat-detail">
+                <span class="stat-number">GeeksforGeeks</span>
+                <span class="stat-title">Campus Mantri Lead</span>
+              </div>
+            </div>
+            <div class="cert-stat-badge">
+              <span class="stat-icon">💻</span>
+              <div class="stat-detail">
+                <span class="stat-number">LeetCode &amp; GFG</span>
+                <span class="stat-title">Java DSA Mastery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Bar: View Mode Switcher + Interactive Filter Tabs -->
+          <div class="cert-controls-wrapper">
+            <!-- View Mode Switcher -->
+            <div class="cert-view-switcher" role="group" aria-label="Certificate View Mode">
+              <button class="view-switch-btn active" id="view-mode-grid" data-mode="grid">
+                <span class="switch-icon">⊞</span> Bento Grid
+              </button>
+              <button class="view-switch-btn" id="view-mode-deck" data-mode="deck">
+                <span class="switch-icon">✦</span> 3D Interactive Deck
+              </button>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="cert-filter-bar">
+              <button class="cert-filter-btn active" data-filter="all">All (6)</button>
+              <button class="cert-filter-btn" data-filter="iit">IIT Delhi (2)</button>
+              <button class="cert-filter-btn" data-filter="google">Google AI (1)</button>
+              <button class="cert-filter-btn" data-filter="gfg">GeeksforGeeks (2)</button>
+              <button class="cert-filter-btn" data-filter="dsa">Java DSA (2)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D INTERACTIVE CAROUSEL DECK (Active in Deck Mode) -->
+        <div class="cert-deck-showcase" id="cert-deck-showcase" style="display: none;">
+          <div class="deck-stage">
+            <button class="deck-nav-btn deck-prev-btn" id="deck-prev" aria-label="Previous Credential">‹</button>
+            <div class="deck-cards-viewport" id="deck-viewport">
+              <!-- Dynamically populated or mirrored by script -->
+            </div>
+            <button class="deck-nav-btn deck-next-btn" id="deck-next" aria-label="Next Credential">›</button>
+          </div>
+          <div class="deck-dots-bar" id="deck-dots"></div>
+          <p class="deck-hint">✦ Tip: Drag, click arrows, or use left/right keyboard keys to explore credentials in 3D depth</p>
+        </div>
+
+        <!-- BENTO SHOWCASE GRID (Dual-Sided 3D Holographic Flip Cards) -->
+        <div class="certificates-showcase-grid" id="cert-grid-showcase">
+
+          <!-- 01: Google Gemini Student Ambassador -->
+          <div class="cert-card-3d" data-category="google" data-cert-index="0">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/google-gemini-ambassador.jpg" alt="Google Student Ambassador 2026 Candidate" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge google-badge">Google AI</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">#TeamGoogle</span>
+                    <span class="cert-id-badge">GG-AMB-2026</span>
+                  </div>
+                  <h3 class="cert-title">Google Student Ambassador 2026 Candidate</h3>
+                  <h4 class="cert-issuer">Google Gemini Community</h4>
+                  <p class="cert-desc">Driving Generative AI literacy, evangelizing Google Gemini 1.5/2.0 models, and empowering campus peers with cutting-edge agentic workflows.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/google-gemini-ambassador.jpg"
+                      data-title="Google Student Ambassador 2026 Candidate"
+                      data-org="Google Gemini #TeamGoogle"
+                      data-badge="Google AI • Student Ambassador"
+                      data-id="GG-GEMINI-AMB-2026"
+                      data-skills="Google Gemini 1.5/2.0, Generative AI, AI Literacy, Prompt Engineering"
+                      data-desc="Official Google Student Ambassador 2026 candidate badge for Ayush Rawat, representing Google Gemini AI technologies to empower student developers with cutting-edge generative tools.">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">VERIFIED</span>
+                  </div>
+                  <h4 class="cert-back-title">Google Student Ambassador 2026</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Issuing Body</span>
+                      <span class="meta-val">Google Gemini / Alphabet</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Status</span>
+                      <span class="meta-val val-green">● Official Candidate</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">GG-GEMINI-AMB-2026</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Candidate</span>
+                      <span class="meta-val">Ayush Rawat</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">Gemini 1.5 / 2.0</span>
+                      <span class="skill-mini-pill">GenAI Tech</span>
+                      <span class="skill-mini-pill">Student Leadership</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="0">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02: IIT Delhi TRYST'26 -->
+          <div class="cert-card-3d" data-category="iit" data-cert-index="1">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/iit-delhi-tryst26.jpg" alt="IIT Delhi TRYST'26 Certificate of Excellence" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge iit-badge">Excellence Award</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">IIT Delhi</span>
+                    <span class="cert-id-badge">TRYST26-CA</span>
+                  </div>
+                  <h3 class="cert-title">Campus Ambassador — Certificate of Excellence</h3>
+                  <h4 class="cert-issuer">Indian Institute of Technology (IIT) Delhi</h4>
+                  <p class="cert-desc">Recognized for extraordinary leadership and student outreach at TRYST'26, North India's largest technical festival, signed by IIT Delhi leadership.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/iit-delhi-tryst26.jpg"
+                      data-title="Campus Ambassador — Certificate of Excellence"
+                      data-org="Indian Institute of Technology (IIT) Delhi • TRYST'26"
+                      data-badge="IIT Delhi • Certificate of Excellence"
+                      data-id="IITD-TRYST26-CA-7201"
+                      data-skills="Technical Conclave Leadership, Strategic Outreach, Campus Community, Brand Ambassadorship"
+                      data-desc="Awarded to Ayush Rawat for outstanding performance and high-impact contributions as Campus Ambassador at TRYST'26, signed by Chairman Anup Singh, Co-Chairman Agam Gupta, and Overall Coordinator Abhayveer Singh.">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal seal-gold">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">EXCELLENCE</span>
+                  </div>
+                  <h4 class="cert-back-title">TRYST '26 Excellence Award</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Conclave</span>
+                      <span class="meta-val">IIT Delhi TRYST'26</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Signatories</span>
+                      <span class="meta-val val-green">● Chairman &amp; Co-Chair</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">IITD-TRYST26-CA-7201</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Recipient</span>
+                      <span class="meta-val">Ayush Rawat</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">National Conclave</span>
+                      <span class="skill-mini-pill">Leadership Honor</span>
+                      <span class="skill-mini-pill">Student Outreach</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="1">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03: IIT Delhi BECON 2026 -->
+          <div class="cert-card-3d" data-category="iit" data-cert-index="2">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/iit-delhi-becon26.jpg" alt="IIT Delhi BECON 2026 Certificate of Participation" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge iit-badge">Conclave Award</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">eDC IIT Delhi</span>
+                    <span class="cert-id-badge">BECON '26</span>
+                  </div>
+                  <h3 class="cert-title">Campus Ambassador — Certificate of Participation</h3>
+                  <h4 class="cert-issuer">Entrepreneurship Development Cell (eDC), IIT Delhi</h4>
+                  <p class="cert-desc">Acknowledged for exemplary dedication and high impact as Campus Ambassador for BECON '26, the premier Annual Business &amp; Entrepreneurship Conclave.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/iit-delhi-becon26.jpg"
+                      data-title="Campus Ambassador — Certificate of Participation"
+                      data-org="Entrepreneurship Development Cell (eDC), IIT Delhi"
+                      data-badge="eDC IIT Delhi • BECON '26"
+                      data-id="IITD-BECON26-EDC-489"
+                      data-skills="Startup Ecosystem, Entrepreneurship Evangelism, Campus Relations, Professional Networking"
+                      data-desc="Awarded to Ayush Rawat for remarkable dedication and significant impact as a Campus Ambassador for BECON '26, the Annual Business and Entrepreneurship Conclave of eDC IIT Delhi (Tenure: 15th Dec 2025 – 2nd Feb 2026).">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal seal-gold">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">VERIFIED</span>
+                  </div>
+                  <h4 class="cert-back-title">BECON '26 Conclave Honor</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Issuing Cell</span>
+                      <span class="meta-val">eDC IIT Delhi</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Tenure</span>
+                      <span class="meta-val val-green">● Dec 2025 – Feb 2026</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">IITD-BECON26-EDC-489</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Recipient</span>
+                      <span class="meta-val">Ayush Rawat</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">Startup Relations</span>
+                      <span class="skill-mini-pill">Campus Conclave</span>
+                      <span class="skill-mini-pill">Entrepreneurship</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="2">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04: GeeksforGeeks Campus Mantri -->
+          <div class="cert-card-3d" data-category="gfg" data-cert-index="3">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/gfg-campus-mantri.png" alt="GeeksforGeeks Campus Mantri Poster" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge gfg-badge">Campus Leadership</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">GeeksforGeeks</span>
+                    <span class="cert-id-badge">GFG-MVIET</span>
+                  </div>
+                  <h3 class="cert-title">Campus Mantri — Official Campus Body</h3>
+                  <h4 class="cert-issuer">GeeksforGeeks &amp; MVIET Chapter</h4>
+                  <p class="cert-desc">Official Campus Mantri representing GFG, organizing DSA bootcamps, student coding challenges, and peer mentoring across BTech CSE.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/gfg-campus-mantri.png"
+                      data-title="Campus Mantri — Official Campus Body"
+                      data-org="GeeksforGeeks Campus Body &amp; MVIET"
+                      data-badge="GeeksforGeeks • Campus Mantri"
+                      data-id="GFG-MVIET-MANTRI-2025"
+                      data-skills="DSA Bootcamps, Coding Community Leadership, Peer Mentoring, Hackathon Coordination"
+                      data-desc="Official GeeksforGeeks Campus Body appointment poster featuring Ayush Rawat, Campus Mantri, BTech CSE 2nd Year, Madhu Vachaspati Institute of Engineering &amp; Technology (MVIET).">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal seal-green">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">MANTRI</span>
+                  </div>
+                  <h4 class="cert-back-title">GFG Official Campus Mantri</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Organization</span>
+                      <span class="meta-val">GeeksforGeeks Body</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Campus Chapter</span>
+                      <span class="meta-val val-green">● MVIET CSE 2nd Year</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">GFG-MVIET-MANTRI-2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Instagram Page</span>
+                      <span class="meta-val">@geeksforgeeks_mviet</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">DSA Workshops</span>
+                      <span class="skill-mini-pill">Student Mentoring</span>
+                      <span class="skill-mini-pill">Coding Contests</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="3">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05: LeetCode DSA Java Problem Solving Mastery -->
+          <div class="cert-card-3d" data-category="dsa" data-cert-index="4">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/leetcode-dsa-java.svg" alt="LeetCode DSA Problem Solving Mastery Certificate" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge leet-badge">Java DSA</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">LeetCode</span>
+                    <span class="cert-id-badge">@rawat_ayush00</span>
+                  </div>
+                  <h3 class="cert-title">Problem Solving Mastery — Java DSA</h3>
+                  <h4 class="cert-issuer">LeetCode Competitive Arena</h4>
+                  <p class="cert-desc">Solving core algorithmic problems in Java across Arrays, Two Pointers, Trees, Graphs, and Dynamic Programming with optimal Big-O complexity.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/leetcode-dsa-java.svg"
+                      data-title="Problem Solving Mastery — Java DSA"
+                      data-org="LeetCode Competitive Arena (@rawat_ayush00)"
+                      data-badge="LeetCode • Java DSA Mastery"
+                      data-id="LC-DSA-JAVA-2026-AR00"
+                      data-skills="Java Collections Framework, Optimal Time/Space Complexity, Tree Traversal, Dynamic Programming"
+                      data-desc="Recognition for consistent algorithmic problem solving on LeetCode with handle @rawat_ayush00, solving complex interview-level challenges with clean, robust Java code.">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal seal-gold">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">TOP SOLVER</span>
+                  </div>
+                  <h4 class="cert-back-title">LeetCode Java DSA Dossier</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Platform</span>
+                      <span class="meta-val">LeetCode Online Judge</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Primary Stack</span>
+                      <span class="meta-val val-green">● Java (JDK 17+)</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">LC-DSA-JAVA-2026-AR00</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Handle</span>
+                      <span class="meta-val font-mono">@rawat_ayush00</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">Java Collections</span>
+                      <span class="skill-mini-pill">O(N) Complexity</span>
+                      <span class="skill-mini-pill">Tree &amp; Graph DSA</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="4">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06: GeeksforGeeks 160 Days DSA & Campus Leadership -->
+          <div class="cert-card-3d" data-category="gfg dsa" data-cert-index="5">
+            <div class="cert-card-inner">
+              <!-- FRONT -->
+              <div class="cert-card-front">
+                <div class="cert-hologram-sheen"></div>
+                <div class="cert-image-container">
+                  <img src="assets/certificates/gfg-dsa-java.svg" alt="GeeksforGeeks 160 Days DSA Challenge Certificate" class="cert-thumb" loading="lazy">
+                  <div class="cert-overlay">
+                    <span class="cert-zoom-pill">Quick Inspect 🔍</span>
+                  </div>
+                  <span class="cert-corner-badge gfg-badge">160 Days DSA</span>
+                  <div class="cert-verified-pill">
+                    <span class="pulse-dot"></span> Verified Credential
+                  </div>
+                </div>
+                <div class="cert-info">
+                  <div class="cert-meta-row">
+                    <span class="cert-tag">GFG Academy</span>
+                    <span class="cert-id-badge">GFG-160-DSA</span>
+                  </div>
+                  <h3 class="cert-title">160 Days DSA Challenge &amp; Algorithmic Achievement</h3>
+                  <h4 class="cert-issuer">GeeksforGeeks Academy</h4>
+                  <p class="cert-desc">Mastering advanced algorithmic techniques, recursion, sorting, binary search, and Java OOP principles through intensive daily problem solving.</p>
+                  <div class="cert-card-actions">
+                    <button class="btn-cert-open" 
+                      data-img="assets/certificates/gfg-dsa-java.svg"
+                      data-title="160 Days DSA Challenge &amp; Algorithmic Achievement"
+                      data-org="GeeksforGeeks Academy • Campus Chapter"
+                      data-badge="GeeksforGeeks • 160 Days DSA"
+                      data-id="GFG-DSA-JAVA-2025-MVIET"
+                      data-skills="160 Days DSA Challenge, Java Recursion, Searching & Sorting, Space-Time Analysis"
+                      data-desc="Recognized for exceptional consistency in the 160 Days DSA Challenge on GeeksforGeeks, solving challenging Java algorithmic problems and promoting competitive coding.">
+                      <span>View Fullscreen</span>
+                      <span class="cert-arrow">↗</span>
+                    </button>
+                    <button class="btn-cert-flip" title="Flip card to inspect verification dossier">
+                      <span>Dossier</span>
+                      <span class="flip-icon">🔄</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="cert-card-back">
+                <div class="cert-back-header">
+                  <span class="cert-back-badge">OFFICIAL VERIFICATION DOSSIER</span>
+                  <button class="btn-cert-flip-back" title="Flip back to preview">↩ Front</button>
+                </div>
+                <div class="cert-back-body">
+                  <div class="cert-back-seal seal-green">
+                    <span class="seal-icon">★</span>
+                    <span class="seal-text">GFG DSA</span>
+                  </div>
+                  <h4 class="cert-back-title">GFG 160 Days DSA Dossier</h4>
+                  <div class="cert-back-meta-grid">
+                    <div class="meta-item">
+                      <span class="meta-label">Academy</span>
+                      <span class="meta-val">GeeksforGeeks</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Challenge</span>
+                      <span class="meta-val val-green">● 160 Days Streak</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Credential ID</span>
+                      <span class="meta-val val-mono">GFG-DSA-JAVA-2025-MVIET</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Recipient</span>
+                      <span class="meta-val">Ayush Rawat</span>
+                    </div>
+                  </div>
+                  <div class="cert-back-skills">
+                    <span class="skills-heading">Validated Competencies:</span>
+                    <div class="skills-pill-wrap">
+                      <span class="skill-mini-pill">160 Days Streak</span>
+                      <span class="skill-mini-pill">Java OOP &amp; DSA</span>
+                      <span class="skill-mini-pill">Optimal Space-Time</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cert-back-footer">
+                  <button class="btn-cert-inspect-trigger" data-target="5">
+                    <span>Inspect High-Res Credential 🔍</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS & HIRE ME SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="contact-header-wrap">
+          <div class="section-tag">
+            <span class="accent-dot">•</span> Let's Connect
+          </div>
+          <h2 class="section-title">Get in Touch With Ayush Rawat</h2>
+          <p class="contact-intro">
+            Currently an active fresher open for Junior Frontend Developer roles, Software Internships, Video Editing projects, or technical collaborations. Let's chat!
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Left Column: Direct Contact Details & Info Cards -->
+          <div class="contact-details-col">
+            
+            <!-- Email Card with 1-Click Copy -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon">✉️</div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Direct Email</span>
+                <a href="mailto:ayushrawat2101@gmail.com" class="contact-card-val" id="email-text">ayushrawat2101@gmail.com</a>
+              </div>
+              <button class="btn-copy" id="copy-email-btn" title="Copy Email to Clipboard">
+                <span class="copy-icon">📋</span>
+                <span class="copy-text">Copy</span>
+              </button>
+            </div>
+
+            <!-- Phone & WhatsApp Card -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon whatsapp-icon">💬</div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Phone / WhatsApp</span>
+                <span class="contact-card-val" id="phone-text">+91 7233040176</span>
+              </div>
+              <a href="https://wa.me/917233040176?text=Hi%20Ayush,%20saw%20your%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" rel="noopener" class="btn-whatsapp">
+                <span>WhatsApp</span>
+                <span class="wa-arrow">↗</span>
+              </a>
+            </div>
+
+            <!-- Location & Availability Card -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Location &amp; Current Status</span>
+                <span class="contact-card-val">India (Open to Remote &amp; Relocation)</span>
+                <span class="status-pill"><span class="green-dot"></span> IBM PBEL Intern • Open for Roles</span>
+              </div>
+            </div>
+
+            <!-- Resume / CV Download Card -->
+            <div class="contact-info-card resume-card">
+              <div class="contact-card-icon">📄</div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Curriculum Vitae</span>
+                <span class="contact-card-val">Ayush_Rawat_Resume.pdf</span>
+              </div>
+              <a href="mailto:ayushrawat2101@gmail.com?subject=Request%20Resume%20-%20Ayush%20Rawat" class="btn-download-cv" id="download-cv-btn">
+                <span>Request CV</span>
+                <span class="btn-icon">↓</span>
+              </a>
+            </div>
+
+            <!-- Social Media Channels Grid (Extracted Clean Usernames) -->
+            <div class="contact-socials-box">
+              <span class="contact-socials-title">All Profiles &amp; Social Links</span>
+              <div class="social-badges-grid full-grid">
+                <!-- GitHub -->
+                <a href="https://github.com/ayushrawat2101-cyber" target="_blank" rel="noopener" class="social-badge" title="GitHub">
+                  <span class="sb-icon">💻</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">GitHub</span>
+                    <span class="badge-handle">@ayushrawat2101-cyber</span>
+                  </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ayush-rawat-14102238a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-badge" title="LinkedIn">
+                  <span class="sb-icon">💼</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">LinkedIn</span>
+                    <span class="badge-handle">in/ayush-rawat</span>
+                  </div>
+                </a>
+
+                <!-- LeetCode -->
+                <a href="https://leetcode.com/u/rawat_ayush00/" target="_blank" rel="noopener" class="social-badge" title="LeetCode">
+                  <span class="sb-icon">⚡</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">LeetCode</span>
+                    <span class="badge-handle">@rawat_ayush00</span>
+                  </div>
+                </a>
+
+                <!-- Video Editing Insta -->
+                <a href="https://www.instagram.com/cinematic_lens89?cplk=bzVwcW9weXdkdmZi" target="_blank" rel="noopener" class="social-badge highlight-social" title="Cinematic Video Editing">
+                  <span class="sb-icon">🎬</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">Video Editing</span>
+                    <span class="badge-handle">@cinematic_lens89</span>
+                  </div>
+                </a>
+
+                <!-- Personal Insta -->
+                <a href="https://www.instagram.com/rawat_ayush00?srtk=MWdtNWMxNm94N2k4OA==" target="_blank" rel="noopener" class="social-badge" title="Instagram Personal">
+                  <span class="sb-icon">📸</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">Instagram</span>
+                    <span class="badge-handle">@rawat_ayush00</span>
+                  </div>
+                </a>
+
+                <!-- GFG Campus Mantri -->
+                <a href="https://www.instagram.com/geeksforgeeks_mviet?dlrf=MXhweHpjNGU3Y3Z6NA==" target="_blank" rel="noopener" class="social-badge" title="GFG Campus Mantri">
+                  <span class="sb-icon">🏆</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">GFG Campus</span>
+                    <span class="badge-handle">@geeksforgeeks_mviet</span>
+                  </div>
+                </a>
+
+                <!-- X (Twitter) -->
+                <a href="https://x.com/AyushRawat57075" target="_blank" rel="noopener" class="social-badge" title="X (Twitter)">
+                  <span class="sb-icon">🐦</span>
+                  <div class="badge-text-wrap">
+                    <span class="badge-platform">X (Twitter)</span>
+                    <span class="badge-handle">@AyushRawat57075</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Direct Message Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card">
+              <h3 class="form-title">Send Me a Message</h3>
+              <p class="form-desc">Have a job role, internship opening, video editing project, or just want to say hi? Send a message below!</p>
+
+              <form id="portfolio-contact-form" class="portfolio-form">
+                <div class="form-group">
+                  <label for="form-name">Your Name</label>
+                  <input type="text" id="form-name" placeholder="John Doe / Recruiter Name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Your Email Address</label>
+                  <input type="email" id="form-email" placeholder="john@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-service">Topic / Opportunity</label>
+                  <select id="form-service" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="frontend-job">Junior Frontend Developer (Full-Time / Intern)</option>
+                    <option value="java-role">Java / Software Engineering Role</option>
+                    <option value="video-editing">Cinematic Video Editing &amp; Reels</option>
+                    <option value="freelance-web">Web Development Project</option>
+                    <option value="community">Campus / Community Collaboration</option>
+                    <option value="other">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Your Message</label>
+                  <textarea id="form-message" rows="4" placeholder="Tell me about the role, project timeline, or questions..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <span>Send Message</span>
+                  <span class="btn-icon">↗</span>
+                </button>
+
+                <div id="form-status" class="form-status-msg"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          AYUSH RAWAT<span class="logo-dot"></span>
+        </a>
+        <p class="footer-copy">© 2026 Ayush Rawat. All rights reserved. Crafted with clean code, Java DSA &amp; cinematic motion.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/ayushrawat2101-cyber" target="_blank" rel="noopener" class="social-link">GitHub (@ayushrawat2101-cyber)</a>
+        <a href="https://www.linkedin.com/in/ayush-rawat-14102238a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-link">LinkedIn (in/ayush-rawat)</a>
+        <a href="https://leetcode.com/u/rawat_ayush00/" target="_blank" rel="noopener" class="social-link">LeetCode (@rawat_ayush00)</a>
+        <a href="https://www.instagram.com/cinematic_lens89?cplk=bzVwcW9weXdkdmZi" target="_blank" rel="noopener" class="social-link">Edits (@cinematic_lens89)</a>
+      </div>
+
+      <a href="#hero" class="back-to-top" id="back-to-top">
+        <span>Back to Top</span>
+        <span class="top-arrow">↑</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Fullscreen Certificate Lightbox Modal with Pan/Zoom & Navigation -->
+  <div id="cert-lightbox" class="cert-lightbox" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
+    <div class="lightbox-modal">
+      <!-- Lightbox Header Bar -->
+      <div class="lightbox-header-bar">
+        <div class="lightbox-counter-badge">
+          <span class="lightbox-counter-dot"></span>
+          <span>Credential</span>
+          <span id="lightbox-counter-idx" class="font-bold">1</span>
+          <span>of</span>
+          <span id="lightbox-counter-total" class="font-bold">8</span>
+        </div>
+
+        <!-- Zoom Controls -->
+        <div class="lightbox-zoom-toolbar">
+          <button class="zoom-btn" id="lightbox-zoom-out" title="Zoom Out (-)">−</button>
+          <button class="zoom-btn" id="lightbox-zoom-reset" title="Reset Fit (100%)">100%</button>
+          <button class="zoom-btn" id="lightbox-zoom-in" title="Zoom In (+)">+</button>
+        </div>
+
+        <button class="lightbox-close-btn" id="lightbox-close" title="Close Lightbox (Esc)">&times;</button>
+      </div>
+
+      <!-- Main Stage with Floating Nav Arrows -->
+      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightbox-prev-btn" title="Previous Certificate (← Left Arrow)">‹</button>
+      <button class="lightbox-nav-btn lightbox-next-btn" id="lightbox-next-btn" title="Next Certificate (→ Right Arrow)">›</button>
+
+      <div class="lightbox-content">
+        <div class="lightbox-image-wrap" id="lightbox-image-wrap">
+          <img id="lightbox-img" src="" alt="Certificate Preview">
+        </div>
+        <div class="lightbox-info">
+          <div class="lightbox-meta-row">
+            <span class="lightbox-badge" id="lightbox-badge">Verified Credential</span>
+            <div class="lightbox-id-chip" id="lightbox-id-chip-wrap">
+              <span id="lightbox-id-text">ID: VERIFIED</span>
+              <button class="btn-copy-id" id="lightbox-copy-id" title="Copy Credential ID">📋</button>
+            </div>
+          </div>
+          <h3 class="lightbox-title" id="lightbox-title">Certificate Title</h3>
+          <h4 class="lightbox-org" id="lightbox-org">Issuing Authority</h4>
+          <p class="lightbox-desc" id="lightbox-desc">Detailed verification context and achievement description.</p>
+          
+          <!-- Validated Skills in Lightbox -->
+          <div class="lightbox-skills-box">
+            <span class="skills-box-label">Verified Competencies:</span>
+            <div class="lightbox-skills-pills" id="lightbox-skills-pills"></div>
+          </div>
+
+          <div class="lightbox-actions">
+            <a id="lightbox-open-raw" href="" target="_blank" rel="noopener" class="btn btn-primary btn-mini-open">
+              <span>Open Original High-Res</span>
+              <span class="btn-icon">↗</span>
+            </a>
+            <div class="lightbox-nav-mini">
+              <button class="btn-nav-mini" id="lightbox-nav-mini-prev">← Prev</button>
+              <button class="btn-nav-mini" id="lightbox-nav-mini-next">Next →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
