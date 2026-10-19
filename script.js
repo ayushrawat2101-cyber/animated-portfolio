@@ -379,36 +379,25 @@
     },
     {
       index: 3,
-      img: 'assets/certificates/gfg-campus-mantri.png',
-      title: 'Campus Mantri — Official Campus Body',
-      org: 'GeeksforGeeks Campus Body & MVIET',
-      badge: 'GeeksforGeeks • Campus Mantri',
-      id: 'GFG-MVIET-MANTRI-2025',
+      img: 'assets/certificates/gfg-completion-certificate.png',
+      title: 'Campus Mantri — Official Completion Certificate',
+      org: 'GeeksforGeeks • Campus Body (Signed by Mr. Sandeep Jain, CEO)',
+      badge: 'GeeksforGeeks • 1-Year Honor',
+      id: 'GfG#CM2026-0178',
       category: 'gfg',
-      skills: ['DSA Mentoring', 'Student Chapter Leader', 'Bootcamp Host', 'Peer Reviews'],
-      desc: "Official GeeksforGeeks Campus Body appointment poster featuring Ayush Rawat, Campus Mantri, BTech CSE 2nd Year, Madhu Vachaspati Institute of Engineering & Technology (MVIET)."
+      skills: ['Campus Leadership', 'Student Community Mentorship', 'Tech Outreach', 'GeeksforGeeks Campus Body'],
+      desc: "Official Completion Certificate presented to Ayush Rawat for outstanding contribution to GeeksforGeeks through the Campus Mantri program, signed by Mr. Sandeep Jain, Founder and CEO of GeeksforGeeks (Certificate ID: GfG#CM2026-0178)."
     },
     {
       index: 4,
-      img: 'assets/certificates/leetcode-dsa-java.svg',
-      title: 'Problem Solving Mastery — Java DSA',
-      org: 'LeetCode Competitive Arena (@rawat_ayush00)',
-      badge: 'LeetCode • Java DSA Mastery',
-      id: 'LC-DSA-JAVA-2026-AR00',
-      category: 'dsa',
-      skills: ['Java Collections', 'O(N) Complexity', 'Tree & Graph DSA', 'Dynamic Programming'],
-      desc: "Recognition for consistent algorithmic problem solving on LeetCode with handle @rawat_ayush00, solving complex interview-level challenges with clean, robust Java code."
-    },
-    {
-      index: 5,
-      img: 'assets/certificates/gfg-dsa-java.svg',
-      title: '160 Days DSA Challenge & Algorithmic Achievement',
-      org: 'GeeksforGeeks Academy • Campus Chapter',
-      badge: 'GeeksforGeeks • 160 Days DSA',
-      id: 'GFG-DSA-JAVA-2025-MVIET',
-      category: 'gfg dsa',
-      skills: ['160 Days Streak', 'Java OOP & DSA', 'Binary Trees', 'Searching & Sorting'],
-      desc: "Recognized for exceptional consistency in the 160 Days DSA Challenge on GeeksforGeeks, solving challenging Java algorithmic problems and promoting competitive coding."
+      img: 'assets/certificates/gfg-campus-mantri.png',
+      title: 'Campus Mantri — Official Campus Body Appointment',
+      org: 'GeeksforGeeks Campus Body & MVIET',
+      badge: 'GeeksforGeeks • Campus Leadership',
+      id: 'GFG-MVIET-MANTRI-2025',
+      category: 'gfg',
+      skills: ['DSA Bootcamps', 'Student Chapter Leader', 'Peer Mentoring', 'MVIET CSE Chapter'],
+      desc: "Official GeeksforGeeks Campus Body appointment poster featuring Ayush Rawat, Campus Mantri, BTech CSE 2nd Year, Madhu Vachaspati Institute of Engineering & Technology (MVIET)."
     }
   ];
 
